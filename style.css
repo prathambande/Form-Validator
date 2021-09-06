@@ -5,8 +5,8 @@
 }
 
 :root{
-    --succ: darkgreen;
-    --error: rgb(255, 0, 0);
+    --succ: rgb(23, 255, 23);
+    --error: rgb(245, 28, 28);
 }
 
 body{
