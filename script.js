@@ -34,8 +34,6 @@ function checklength(input,min,max){
         showError(input,`${getFieldName(input)} length should be greater than ${min}`);
     }else if(input.value.length > max){
         showError(input,`${getFieldName(input)} length should be lesser than ${max}`);
-    }else{
-        showSuccess(input);
     }
 }
 
@@ -64,10 +62,11 @@ function matchpass(password,password2){
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
-    
-    matchpass(password,password2);
-    checklength(username,3,15);
-    checklength(password,5,10);
+
     checkAll([username,email,password,password2]);
     validateEmail(email);
+    checklength(username,3,15);
+    matchpass(password,password2);
+    checklength(password,5,10);
+    checklength(password2,5,10);
 });
