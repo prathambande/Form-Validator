@@ -53,7 +53,7 @@ function validateEmail(email) {
 }
 
 function matchpass(password,password2){
-    if(password.value !== password2.value){
+    if(password.value !== password2.value || password2.value === ''){
         showError(password2, 'Password Not Matching');
     }else{
         showSuccess(password2);
@@ -68,5 +68,5 @@ form.addEventListener('submit', function(e){
     checklength(username,3,15);
     matchpass(password,password2);
     checklength(password,5,10);
-    checklength(password2,5,10);
+ 
 });
